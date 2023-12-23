@@ -1,0 +1,10 @@
+a=[1,2,6,3,6,4,76,,87,87,34,]
+out=a[0]
+out2=a[0]
+for i in a:
+    if out<i:
+        out2=out
+        out=i
+    else out2<i:
+        out2=i 
+print(out,out2)        
