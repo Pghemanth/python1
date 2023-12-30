@@ -1,7 +1,6 @@
-result = []
-for i in range(1,11):
-    out =1
-    for j in range(1,i+1):
-        out*=j
-    result+=[out] 
-print( result)
+def fact(a):
+    if a==1:
+        return 1
+    return a*fact(a-1)        
+a=[ fact(i) for i in range(1,8)]
+print(a)

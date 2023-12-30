@@ -1,7 +1,8 @@
-n=int(input('enter the number:'))
-i=1
-out=1
-while i<=n:
-    out*=i
-    i+=1
-print(out)    
+def fact():
+    a=int(input('enter a number:-'))
+    fact=1
+    for i in range(1,a+1):
+        fact=fact*i
+        print(fact)
+fact()
+        

@@ -1,4 +1,3 @@
-x='abcd'
-for i in range(len(x)):
-    print(x)
-    x='a'
+for num in range(2,-5,-1):
+    print(num,end=",")
+    

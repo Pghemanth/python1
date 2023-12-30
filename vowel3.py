@@ -1,10 +1,10 @@
-a=' '
-vowel_count=0
-cons_count=0
-for var in a:
-    if 'A'<= var<='Z' or 'a'<=var<='z':
-        if var in 'aeiouAEIOU':
-            vowel_count+=1
-        else:
-            cons_count+=1
- print(vowel_count,cons_count)               
+def vowel(a):
+    for i in range(len(a)):
+        if a[i] in 'aeiouAEIOU':
+            yield a[i] 
+            yield i
+out=vowel('god father')
+res=''
+for i in out:
+    res+=str(i)
+print(res)           
