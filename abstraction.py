@@ -1,21 +1,40 @@
-#abstraction
-from abc import ABC
+
+from abc import ABC,abstractmethod
 
 
-class car:
+class car(ABC):
 
-    def __init__(self,name,mileage,price,color):
+    def __init__(self,name,price,color):
         self.name=name
-        self.maileage=maileage
         self.price=price
         self.color=color
         self.speed=0
 
-class Supre(car):
-    pass
+    @abstractmethod
+    def stop():
+        pass
+    @abstractmethod
+    def speed_up():
+        pass
+    @abstractmethod
+    def speed_down():
+        pass
 
 class Bmw(car):
-    pass
+    def speed_up(self):
+        self.speed+=5
+    def speed_down(self):
+        self.speed-=5
+    def stop(self):
+        self.speed=0
+class Tata(car):
+    def speed_up(self):
+        self.speed+=2
+    def speed_down(self):
+        self.speed-=2
+    def stop(self):
+        self.speed=0 
 
-c1=Supra("supra mk4",784554,"black")   
-c2=Bmw("bmw",487998,"black")     
+
+bmw=Bmw ('mk4','black',469996)   
+nexon=Tata("nexon ev",487998,"white")     
